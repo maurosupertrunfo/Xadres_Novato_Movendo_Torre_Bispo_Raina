@@ -1,74 +1,40 @@
-/*
-    1.
-Nível Novato
-Desafio: nível novato
-Movimentando as Peças do xadrez
-
-
-Este desafio foca na movimentação das peças de xadrez usando estruturas de repetição em C. Você aplicará o que aprendeu sobre for, while e do-while para simular movimentos no tabuleiro.
-
-
-O que você vai fazer
-
-
-Você deverá criar um único programa em C que simule o movimento de três peças: Torre, Bispo e Rainha. Para cada peça, utilize uma estrutura de repetição diferente (for, while ou do-while) para simular seu movimento. O programa deverá imprimir no console a direção do movimento a cada casa percorrida pela peça.
-
- 
-
-Torre: Move-se em linha reta horizontalmente ou verticalmente. Seu programa deverá simular o movimento da Torre cinco casas para a direita.
- 
-Bispo: Move-se na diagonal. Seu programa deverá simular o movimento do Bispo cinco casas na diagonal para cima e à direita. Para representar a diagonal, você imprimirá a combinação de duas direções a cada casa (ex: "Cima, Direita").
- 
-Rainha: Move-se em todas as direções. Seu programa deverá simular o movimento da Rainha oito casas para a esquerda.
-
-Requisitos funcionais
-
-
-Entrada de Dados: Os valores para o número de casas a serem movidas serão definidos diretamente no código através de variáveis ou constantes.
- 
-Lógica de Movimentação: Cada programa deverá implementar a lógica de movimento específica de cada peça (Torre, Bispo, Rainha).
- 
-Saída de Dados: O programa deverá imprimir no console a direção do movimento a cada casa percorrida pela peça. Para movimentos na diagonal (Bispo), imprimir a combinação de duas direções. Utilize o comando printf para exibir as informações. As saídas devem seguir o padrão: printf("Cima\n");, printf("Baixo\n");, printf("Esquerda\n");, printf("Direita\n");, printf("Cima Esquerda\n"); printf("Direita\n");
-
-*/
-
-
 #include <stdio.h>
 int main(){
+    printf("\nBem-vindo ao simulador **Xadres_Novato_Movendo_Torre_Bispo_Raina**\n");
     char s; //varia s eh usada para escolher a peca do xadres a ser movida
     do{
-        printf("Mover com ?\n T para mover a Torre\n, B para mover Bispo \nR para mover a rainha.\n Outra letra para *sair*.\n");
+        printf("\nVocê vai mover qual peça?\n T para mover a Torre,\n B     ***      Bispo, \n R     ***      Rainha.\n Outra letra para *sair*.\n");
         scanf(" %c", &s);
         if(s=='T'){
             printf("*Torre*\n");
-            printf("r direita, l esquerda c cima e b baixo\n");
+            printf("d direita, e esquerda c cima e b baixo\n");
             char c;
             scanf(" %c",&c);
             // a questao
-            while( !(c!='r' && c!='l' && c!='c' && c!='b')){
-                //aqui != eh nao, o operador inversor, primeiro nao r, l, c, b, e entao eu enverto novamente para selecionar todas as tecla, a nao ser as necessarias.
-                if(c=='r'){
+            while( !(c!='d' && c!='e' && c!='c' && c!='b')){
+                //aqui != eh nao, o operador inversor, primeiro nao d, e, c, b, e entao eu enverto novamente para selecionar todas as tecla, a nao ser as necessarias.
+                if(c=='d'){
                     for(int i=0; i<5; i++){
                         printf("Direita\n");
-                        c='q';
+                        c='x';
                     }
                 }
-                if(c=='l'){
+                if(c=='e'){
                     for(int i=0; i<5; i++){
-                        printf("L\n");
-                        c='q';
+                        printf("Esquerda\n");
+                        c='x';
                     }
                 }
                 if(c=='c'){
                     for(int i=0; i<5; i++){
-                        printf("cima\n");
-                        c='q';
+                        printf("Cima\n");
+                        c='x';
                         }
                     }
                 if(c=='b'){
                     for(int i=0; i<5; i++){
-                        printf("baixo\n");
-                        c='q';
+                        printf("Baixo\n");
+                        c='x';
                     }
                 }
             }
@@ -126,29 +92,29 @@ int main(){
             char r;
             scanf(" %c",&r);
             // a questao
-            while( !(r!='r' && r!='l' && r!='c' && r!='b'  &&  r!='m' && r!='n' && r!='p' && r!='q' )){
+            while( !(r!='d' && r!='e' && r!='c' && r!='b'  &&  r!='m' && r!='n' && r!='p' && r!='q' )){
                 //aqui != eh nao, o operador inversor, primeiro nao r, l, c, b, e entao eu enverto novamente para selecionar todas as tecla, a nao ser as necessarias.
-                if(r=='r'){
+                if(r=='d'){
                     for(int i=0; i<5; i++){
                         printf("Direita\n");
                         r='x';
                     }
                 }
-                if(r=='l'){
+                if(r=='e'){
                     for(int i=0; i<5; i++){
-                        printf("L\n");
+                        printf("Esquerda\n");
                         r='x';
                     }
                 }
                 if(r=='c'){
                     for(int i=0; i<5; i++){
-                        printf("cima\n");
+                        printf("Cima\n");
                         r='x';
                         }
                     }
                 if(r=='b'){
                     for(int i=0; i<5; i++){
-                        printf("baixo\n");
+                        printf("Baixo\n");
                         r='x';
                     }
                 }
